@@ -13,4 +13,4 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-      - uses: elastic/infosec-precommit/pre-commit@v1.0.1
+      - uses: elastic/oblt-actions/pre-commit@v1
