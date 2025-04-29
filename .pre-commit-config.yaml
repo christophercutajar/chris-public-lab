@@ -1,5 +1,5 @@
 repos:
-- repo: https://christophercutajar:{PRECOMMIT_TEST}@github.com/elastic/infosec-precommit
+- repo: https://christophercutajar:${{ secrets.PRECOMMIT_TEST }}@github.com/elastic/infosec-precommit
   rev: v1.0.1
   hooks:
   - id: infosec-precommit
