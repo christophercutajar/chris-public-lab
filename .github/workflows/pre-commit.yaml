@@ -14,5 +14,5 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - env: 
-          GITHUB_TOKEN: ${{ secrets.PRECOMMIT_TEST }}
+            MY_GIT_TOKEN: ${{ secrets.PRECOMMIT_TEST }}
         uses: elastic/oblt-actions/pre-commit@v1
