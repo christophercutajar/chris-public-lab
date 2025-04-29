@@ -13,6 +13,9 @@ jobs:
   pre-commit:
     runs-on: ubuntu-latest
     steps:
-      - env: 
-            MY_GIT_TOKEN: ${{ secrets.PRECOMMIT_TEST }}
-        uses: elastic/oblt-actions/pre-commit@v1
+        - uses: elastic/oblt-actions/pre-commit@v1
+
+        - name: Set up Git auth for private pre-commit hooks
+          run: |
+            git config --global url."https://${{ secrets.PRECOMMIT_TEST }}:x-oauth-basic@github.com/".insteadOf "https://github.com/"
+
